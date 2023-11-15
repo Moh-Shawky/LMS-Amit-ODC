@@ -1,9 +1,12 @@
 <?php
 
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\CourseController;
+use App\Models\Course;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Models\listing;
+use Illuminate\Routing\RouteRegistrar;
 
 /*
 |--------------------------------------------------------------------------
@@ -60,9 +63,28 @@ Route::get('/listings/{id}', function ($id) {
 });
 
 
-Route::get('/', [CourseController::class, 'index']);
+//Admin Routes
+Route::get("/admin", [AdminController::class,'index']);
+Route::get('/login', [AdminController::class,'login']);
+Route::get("/register", [AdminController::class,'register']);
 
 
-Route::get("/admin", function () {
-    return view("admin.home");
+// Route::get('/login');
+// Route::get('/courses',[Course::class])
+
+//Courses Routes
+Route::get('/courses', [CourseController::class, 'index']);
+Route::get('/course/{id}', [CourseController::class, 'show']);
+Route::get('/coursedelete/{id}', [CourseController::class, 'delete']);
+Route::get('/createcourse',[CourseController::class,'create'])->name('createcourse');
+Route::post('/addcourse',[CourseController::class,'add'])->name('addcourse');
+Route::post('/courseupdate',[CourseController::class,'update'])->name('courseupdate');
+
+
+//User Routes
+Route::get('/',function(){
+    return view('frontend/index');
+});
+Route::get('/about',function(){
+    return view('frontend/about');
 });

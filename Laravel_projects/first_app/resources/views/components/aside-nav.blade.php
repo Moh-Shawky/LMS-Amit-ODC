@@ -1,6 +1,6 @@
 <aside id="layout-menu" class="layout-menu menu-vertical menu bg-menu-theme">
     <div class="app-brand demo">
-      <a href="index.html" class="app-brand-link">
+      <a href="/admin" class="app-brand-link">
         <span class="app-brand-logo demo">
           <svg
             width="25"
@@ -69,7 +69,7 @@
     <ul class="menu-inner py-1">
       <!-- Dashboard -->
       <li class="menu-item active">
-        <a href="index.html" class="menu-link">
+        <a href="/admin" class="menu-link">
           <i class="menu-icon tf-icons bx bx-home-circle"></i>
           <div data-i18n="Analytics">Dashboard</div>
         </a>
@@ -79,7 +79,7 @@
       <li class="menu-item">
         <a href="javascript:void(0);" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
-          <div data-i18n="Layouts">Layouts</div>
+          <div data-i18n="students">Students</div>
         </a>
 
         <ul class="menu-sub">
@@ -114,14 +114,14 @@
 
     <!-- Courses -->
     <li class="menu-item">
-        <a href="javascript:void(0);" class="menu-link menu-toggle">
+        <a href="/courses" class="menu-link menu-toggle">
           <i class="menu-icon tf-icons bx bx-layout"></i>
           <div data-i18n="Courses">Courses</div>
         </a>
 
         <ul class="menu-sub">
           <li class="menu-item">
-            <a href="layouts-without-menu.html" class="menu-link">
+            <a href="/courses" class="menu-link">
               <div data-i18n="Without menu">Courses</div>
             </a>
           </li>
