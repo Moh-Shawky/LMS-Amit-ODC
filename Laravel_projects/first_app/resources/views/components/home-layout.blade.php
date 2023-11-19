@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Etrain</title>
-    <link rel="icon" href="{{ asset('Etrain/img/favicon.png')}}">
+    <link rel="icon" href="{{ asset('Etrain/img/favicon.png') }}">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="{{ asset('Etrain/css/bootstrap.min.css') }}">
     <!-- animate CSS -->
@@ -32,7 +32,8 @@
             <div class="row align-items-center">
                 <div class="col-lg-12">
                     <nav class="navbar navbar-expand-lg navbar-light">
-                        <a class="navbar-brand" href="/"> <img src="{{ asset('Etrain/img/logo.png')}}" alt="logo"> </a>
+                        <a class="navbar-brand" href="/"> <img src="{{ asset('Etrain/img/logo.png') }}"
+                                alt="logo"> </a>
                         <button class="navbar-toggler" type="button" data-toggle="collapse"
                             data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                             aria-expanded="false" aria-label="Toggle navigation">
@@ -49,27 +50,16 @@
                                     <a class="nav-link" href="/about">About</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="cource.html">Courses</a>
+                                    <a class="nav-link" href="/courses">Courses</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="blog.html">Blog</a>
-                                </li>
-                                <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="blog.html" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        Pages
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="single-blog.html">Single blog</a>
-                                        <a class="dropdown-item" href="elements.html">Elements</a>
-                                    </div>
+                                    <a class="nav-link" href="/blog">Blog</a>
                                 </li>
                                 <li class="nav-item">
-                                    <a class="nav-link" href="contact.html">Contact</a>
+                                    <a class="nav-link" href="/contact">Contact</a>
                                 </li>
                                 <li class="d-none d-lg-block">
-                                    <a class="btn_1" href="#">Get a Quote</a>
+                                    <a class="btn_1" href="/logout">Logout</a>
                                 </li>
                             </ul>
                         </div>
@@ -80,16 +70,16 @@
     </header>
     <!-- Header part end-->
 
-    {{$slot}}
+    {{ $slot }}
 
-    
+
     <!-- footer part start-->
     <footer class="footer-area">
         <div class="container">
             <div class="row justify-content-between">
                 <div class="col-sm-6 col-md-4 col-xl-3">
                     <div class="single-footer-widget footer_1">
-                        <a href="index.html"> <img src="{{ asset('Etrain/img/logo.png')}}" alt=""> </a>
+                        <a href="index.html"> <img src="{{ asset('Etrain/img/logo.png') }}" alt=""> </a>
                         <p>But when shot real her. Chamber her one visite removal six
                             sending himself boys scot exquisite existend an </p>
                         <p>But when shot real her hamber her </p>
@@ -107,8 +97,7 @@
                                         onfocus="this.placeholder = ''"
                                         onblur="this.placeholder = 'Enter email address'">
                                     <div class="input-group-append">
-                                        <button class="btn btn_1" type="button"><i
-                                                class="ti-angle-right"></i></button>
+                                        <button class="btn btn_1" type="button"><i class="ti-angle-right"></i></button>
                                     </div>
                                 </div>
                             </div>
@@ -161,26 +150,26 @@
 
     <!-- jquery plugins here-->
     <!-- jquery -->
-    <script src="js/jquery-1.12.1.min.js"></script>
+    <script src="{{ asset('Etrain/js/jquery-1.12.1.min.js')}}"></script>
     <!-- popper js -->
-    <script src="js/popper.min.js"></script>
+    <script src="{{ asset('Etrain/js/popper.min.js')}}"></script>
     <!-- bootstrap js -->
-    <script src="js/bootstrap.min.js"></script>
+    <script src="{{ asset('Etrain/js/bootstrap.min.js')}}"></script>
     <!-- easing js -->
-    <script src="js/jquery.magnific-popup.js"></script>
+    <script src="{{ asset('Etrain/js/jquery.magnific-popup.js')}}"></script>
     <!-- swiper js -->
-    <script src="js/swiper.min.js"></script>
+    <script src="{{ asset('Etrain/js/swiper.min.js')}}"></script>
     <!-- swiper js -->
-    <script src="js/masonry.pkgd.js"></script>
+    <script src="{{ asset('Etrain/js/masonry.pkgd.js')}}"></script>
     <!-- particles js -->
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/jquery.nice-select.min.js"></script>
+    <script src="{{ asset('Etrain/js/owl.carousel.min.js')}}"></script>
+    <script src="{{ asset('Etrain/js/jquery.nice-select.min.js')}}"></script>
     <!-- swiper js -->
-    <script src="js/slick.min.js"></script>
-    <script src="js/jquery.counterup.min.js"></script>
-    <script src="js/waypoints.min.js"></script>
+    <script src="{{ asset('Etrain/js/slick.min.js')}}"></script>
+    <script src="{{ asset('Etrain/js/jquery.counterup.min.js')}}"></script>
+    <script src="{{ asset('Etrain/js/waypoints.min.js')}}"></script>
     <!-- custom js -->
-    <script src="js/custom.js"></script>
+    <script src="{{ asset('Etrain/js/custom.js')}}"></script>
 </body>
 
 </html>

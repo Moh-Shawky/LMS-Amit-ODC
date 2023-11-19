@@ -3,10 +3,14 @@
 namespace App\Http\Controllers;
 
 use App\Models\Course;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class CourseController extends Controller
 {
+
+
     public function index()
     {
         $courses = Course::all();
@@ -21,13 +25,18 @@ class CourseController extends Controller
         return view('admin/courses.updatecourse',['course' => $course]);
     }
     public function create() {
-        return view('admin/courses.createcourse');
+        $instructors = User::where('role', 2)->get();
+        // $data = DB::table('users')
+        // ->join('courses', 'users.user_id', '=', 'courses.user_ID')
+        // ->select('users.user_name','users.user_id')
+        // ->get();
+        return view('admin/courses.createcourse',['instructors'=>$instructors]);
         // Course::create();
     }
-    public function add(Request $request ) {
+    public function store(Request $request ) {
         // dd($request);
         Course::create(['course_name' => $request->course_name,
-        'course_about'=> $request->course_about ,'price'=>$request->price,'user_ID'=> 1,'assignment_ID'=>1]);
+        'course_about'=> $request->course_about ,'price'=>$request->price,'user_ID'=> $request->course_instructor,'assignment_ID'=>1]);
         return $this->index();
     }
     public function update(Request $request) {
@@ -40,3 +49,4 @@ class CourseController extends Controller
         return $this->index();
     }
 }
+

@@ -1,11 +1,10 @@
 <x-courses-layout>
 
   <div class="card">
-    <a href="/createcourse"><button type="submit" class="btn btn-primary">Add new course</button></a>
-    
-    <h5 class="card-header">Bordered Table</h5>
+    <a href="/createcourse"><button type="submit" class="btn btn-primary">Add new course</button></a> 
+    <h5 class="card-header">Courses Table</h5>
     <div class="card-body">
-      <div class="table-responsive text-nowrap">
+      {{-- <div class="table-responsive text-nowrap"> --}}
         <table class="table table-bordered">
           <thead>
             <tr>
@@ -54,7 +53,7 @@
       @endforeach
 
         </table>
-      </div>
+      {{-- </div> --}}
     </div>
   </div>
 

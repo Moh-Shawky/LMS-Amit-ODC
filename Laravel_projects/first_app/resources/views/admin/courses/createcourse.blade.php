@@ -7,17 +7,16 @@
                     <small class="text-muted float-end">Default label</small>
                 </div>
                 <div class="card-body">
-                  <form method="POST" action="{{ route('addcourse') }}">
-                    @csrf
+                    <form method="POST" action="{{ route('addcourse') }}">
+                        {{-- {{dd($users)}} --}}
+                        @csrf
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-fullname">Course Name</label>
-                            <input type="text" name="course_name" class="form-control" id="basic-default-fullname"
-                             />
+                            <input type="text" name="course_name" class="form-control" id="basic-default-fullname" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-company">About</label>
-                            <input type="text" name="course_about" class="form-control" id="basic-default-company"
-                                />
+                            <input type="text" name="course_about" class="form-control" id="basic-default-company" />
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">price</label>
@@ -26,8 +25,11 @@
                         </div>
                         <div class="mb-3">
                             <label class="form-label" for="basic-default-phone">Instructor Name</label>
-                            <input name="user_id" type="text" id="basic-default-phone"
-                                class="form-control phone-mask" />
+                            <select name="course_instructor" id="">course_instructor
+                            @foreach ($instructors as $instructor)
+                                <option value="{{ $instructor->user_id }}">{{ $instructor->user_name }}</option>
+                            @endforeach
+                        </select>
                         </div>
                         <button type="submit" class="btn btn-primary">Create</button>
                     </form>

@@ -13,17 +13,14 @@
                             <p>Replenish seasons may male hath fruit beast were seas saw you arrie said man beast whales
                                 his void unto last session for bite. Set have great you'll male grass yielding yielding
                                 man</p>
-                            <a href="#" class="btn_1">View Course </a>
-                            <a href="#" class="btn_2">Get Started </a>
+                            <a href="/courses" class="btn_1">View Course </a>
+                            <a href="/login" class="btn_2">Get Started </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-    <!-- banner part start-->
-
-    <!-- feature_part start-->
     <section class="feature_part">
         <div class="container">
             <div class="row">
